@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:dirbbox/app/modules/profile/views/profile_view.dart';
+import 'package:dirbbox/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -86,9 +86,10 @@ class LoginView extends GetView<LoginController> {
                       ),
                       Expanded(
                         child: ElevatedButton(
-                          onPressed: () {
-                            Get.to(() => ProfileView());
-                          },
+                          // onPressed: () {
+                          //   Get.to(() => ProfileView());
+                          // },
+                          onPressed: () => Get.toNamed(Routes.PROFILE),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [

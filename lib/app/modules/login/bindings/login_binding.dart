@@ -5,8 +5,12 @@ import '../controllers/login_controller.dart';
 class LoginBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<LoginController>(
-      () => LoginController(),
-    );
+    // LazyPut tidak akan menghapus controller dari memori
+    //  Get.lazyPut<LoginController>(
+    //   () => LoginController(),
+    // );
+
+    // Put akan menghapus controller dari memori
+    Get.put(LoginController());
   }
 }
